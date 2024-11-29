@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+
 :root {
     --primary-color: #f0f4f8;
     --secondary-color: #d9e2ec;
@@ -8,7 +12,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 body {
@@ -21,7 +29,7 @@ body {
 
 .container {
     width: 539px;
-    height: 840px;
+    height: 900px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -143,4 +151,62 @@ body {
 .form-container.login-active #login-form {
     opacity: 1;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Adjust padding for smaller screens */
+        max-width: 90%; /* Ensure container does not go beyond screen width */
+    }
+
+    .form {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .btn, .switch-btn {
+        font-size: 13px; /* Smaller buttons */
+        padding: 8px; /* Reduced button padding */
+    }
+
+    .form h2 {
+        font-size: 16px; /* Smaller header size */
+    }
+
+    .form input,
+    .form select {
+        font-size: 13px; /* Adjust input font size */
+    }
+
+    .checkbox-group label {
+        font-size: 12px; /* Smaller checkbox labels */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%; /* Full width on very small screens */
+        padding: 10px; /* More padding for smaller screens */
+    }
+
+    .form {
+        padding: 12px; /* Further reduced padding */
+    }
+
+    .btn, .switch-btn {
+        font-size: 12px; /* Even smaller button size */
+        padding: 6px; /* Further reduce padding */
+    }
+
+    .form h2 {
+        font-size: 14px; /* Even smaller header size */
+    }
+
+    .form input,
+    .form select {
+        font-size: 12px; /* Smaller font size for inputs */
+    }
+
+    .checkbox-group label {
+        font-size: 10px; /* Smaller font size for checkbox labels */
+    }
 }
