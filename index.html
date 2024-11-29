@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup & Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="form-container">
+            <!-- Signup Form -->
+            <form id="signup-form" class="form">
+                <h2>Create Account</h2>
+                
+                <input type="text" id="fullname" placeholder="Full Name" required>
+                <div id="fullname-error" class="error"></div>
+                
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <div id="signup-email-error" class="error"></div>
+                
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <div id="signup-password-error" class="error"></div>
+                
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <div id="confirm-password-error" class="error"></div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </div>
+                
+                <div class="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="date" id="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="number" id="age" min="18" max="120" placeholder="Age" disabled>
+                </div>
+                
+                <div class="form-group">
+                    <label>Country:</label>
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                        <option value="germany">Germany</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Interests:</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="interests" value="technology">
+                            Technology
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="sports">
+                            Sports
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="music">
+                            Music
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="travel">
+                            Travel
+                        </label>
+                        <label>
+                            <input type="checkbox" name="interests" value="reading">
+                            Reading
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Sign Up</button>
+                <button type="button" id="switch-to-login" class="btn switch-btn">Already have an account?</button>
+            </form>
+
+            <!-- Login Form -->
+            <form id="login-form" class="form">
+                <h2>Welcome Back</h2>
+                
+                <input type="email" id="login-email" placeholder="Email" required>
+                <div id="login-email-error" class="error"></div>
+                
+                <input type="password" id="login-password" placeholder="Password" required>
+                <div id="login-password-error" class="error"></div>
+                
+                <button type="submit" class="btn">Login</button>
+                <button type="button" id="switch-to-signup" class="btn switch-btn">Create an account</button>
+            </form>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
